@@ -1,103 +1,82 @@
+<!--本项目由Furruka编写，盗用死全家!!!-->
+<!--代码来源:Furruka(95%),GPT4o(3%),Bing搜索(2%)-->>
 <!DOCTYPE html>
-<html>
-
+<html lang="zh_CN" class="mdui-theme-auto">
 <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dmego Home">
-    <meta name="keywords" content="Dmego,Homepage">
-    <meta name="author" content="Dmego">
-    <title>银狐Furry 个人主页</title>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/onlinewebfonts.css"/>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/vno.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dmego-home-page@latest/assets/css/iconfont.css">
-    <link rel="apple-touch-icon" href="https://unpkg.com/dmego-home-page@latest/apple-touch-icon.png">
-    <link rel="icon" href="https://unpkg.com/dmego-home-page@latest/favicon.ico">
+    <title>起始页</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
 <body>
-    <span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
-    </span>
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">            
-                        <a href="#" title="" class="blog-button">
-                            <div class="img"><img src="http://38.6.219.87/Head.jpg" alt="img" class="js-avatar iUp profilepic"></div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2> 
-                                        
-                                            Endeavoring
-                                        
-                                    </h2>
-                                    <p>
-                                        
-                                            2023 · 突破
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <a href="#" title="Dmego Home">银狐Furry</a>
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">一緒に始めましょう!</p>
-                    <hr class="panel-cover__divider iUp" />
-                    <p id="description" class="panel-cover__description iUp">如何得与凉风约, 不共尘沙一并来!
-                        <br/>
-                        <strong>-「中牟道中」</strong>
-                    </p>
-                    <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="/" class="blog-button">首页</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="http://38.6.219.87/Blog/" class="blog-button" target="_blank">博客</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/littlewhite23333" title="github" target="_blank">
-                                            <i class='social iconfont icon-github'></i>
-                                            <span class="label">github</span>
-                                        </a>
-                                    </li>
-
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+    <div class="container" class="remark iUp">
+        <h1>
+            <div class="box">
+                <span class="text-combo-thick">正在获取时间...</span>
             </div>
-            <div class="panel-cover--overlay cover-slate"></div>
+        </h1>
+        <hr>
+        <p>
+            <div class="hitokoto-box">
+                <span class="text-combo-thick">:D 获取中...</span>
+            </div>
+        </p>
+        <div class="search-container">
+            <form onsubmit="return search()" class="search">
+                <mdui-text-field class="mdui-textfield-sm" clearable label="必应搜索" autocomplete="off" autofocus id="search_input" placeholder="输入您要搜索的内容"></mdui-text-field>
+                <mdui-button class="anniu" type="submit">搜索</mdui-button>
+            </form>
         </div>
-        <!-- <div class="beian iUp">
-            <a class="icp" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">XXX</a>
-            <a class="gwab" href="http://www.beian.gov.cn/portal/recordQuery" target="_blank">XXX</a>
-        </div> -->
-        <div class="remark iUp">
-            <p class="power">Powered By 
-                银狐Furry (改动自Github开源项目:Dmego Home)</a>
-            </p>
-        </div>
-    </header>
-    <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
-    <script type="text/javascript" src="./assets/json/images.json?cb=getBingImages"></script>
+        <hr>
+        <h2 class="text-combo-thick">快捷导航</h2>
+        <p>
+            <a href="https://www.bing.com">
+                <mdui-button>必应</mdui-button>
+            </a>
+            <a href="https://www.baidu.com">
+                <mdui-button>百度</mdui-button>
+            </a>
+            <a href="http://www.sogou.com">
+                <mdui-button>搜狗</mdui-button>
+            </a>
+            <a href="https://www.github.com">
+                <mdui-button>Github</mdui-button>
+            </a>
+            <a href="https://www.gitee.com">
+                <mdui-button>Gitee</mdui-button>
+            </a>
+        </p>
+        <hr>
+        <h2 class="text-combo-thick">吃水不忘挖井人</h2>
+        <p>
+            <a href="https://allgpt.xianyuw.cn/">
+                <mdui-button>GPT4o(转发)</mdui-button>
+            </a>
+            <a href="https://bing.img.run/api.html">
+                <mdui-button>imgRun(每日Bing壁纸接口)</mdui-button>
+            </a>
+            <a href="https://calendarific.com/">
+                <mdui-button>Calendarific API(节假日信息)</mdui-button>
+            </a>
+            <a href="https://hitokoto.cn/">
+                <mdui-button>Hitokoto(一言API)</mdui-button>
+            </a>
+            <a href="https://bing.com">
+                <mdui-button>Bing搜索(主页搜索API)</mdui-button>
+            </a>
+        </p>
+        <p class="power">Powered By Furruka</a>
+        </p>
+        <p class="power">未经允许,禁止盗用网页源代码,否则必死全家!</a>
+        </p>
+    </div>
+    <script src="js/search.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/yiyan.js"></script>
 </body>
 </html>

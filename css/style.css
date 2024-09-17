@@ -1,0 +1,140 @@
+/* 保持字体导入 */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap');
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://bing.img.run/uhd.php'); /* 添加背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-position: center; /* 居中显示背景 */
+    background-repeat: no-repeat; /* 防止背景重复 */
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 确保背景在内容后面 */
+    overflow: hidden;
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px); /* 直接对图片应用模糊效果 */
+    transform: scale(1.1); /* 放大图片以避免模糊边缘露出 */
+}
+
+.main-container {
+    z-index: 1; /* 确保内容位于模糊背景之上 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.text-combo-thick {
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0px 1px 0 #000,
+        0px -1px 0 #000,
+        1px 0px 0 #000,
+        -1px 0px 0 #000;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    mix-blend-mode: difference; /* 与背景颜色差异化混合 */
+}
+
+/* 针对 .container 内的 h1 和 #hitokoto 内的文字应用 1px 的轮廓效果 */
+.container .text-combo-thick,
+#hitokoto .text-combo-thick {
+    color: white; /* 文字颜色为白色 */
+    font-size: 40px; /* 根据需求调整字体大小 */
+    -webkit-text-stroke: 1px black; /* 设置轮廓宽度为 1px */
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0px 1px 0 #000,
+        0px -1px 0 #000,
+        1px 0px 0 #000,
+        -1px 0px 0 #000; /* 使用 1px 的 text-shadow 来增强轮廓 */
+}
+
+/* 搜索容器 */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black; /* 搜索容器中的文字设为黑色 */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search_input {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    color: black; /* 输入框中的文字也为黑色 */
+}
+
+.anniu {
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    color: black; /* 搜索按钮中的文字设为黑色 */
+}
+
+/* 快捷导航 */
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quick-nav button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: black; /* 快捷按钮文字设为黑色 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quick-nav button:hover {
+    background-color: #777;
+}
