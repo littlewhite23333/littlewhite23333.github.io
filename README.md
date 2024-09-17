@@ -1,1 +1,2 @@
-# littlewhite23333.github.io
+# Furruka写的起始页
+实际上，其实很简单，这样，这样，这样，再那样就好了
